@@ -1,12 +1,3 @@
-chrome.runtime.sendMessage({}, (response) => {
-  var checkReady = setInterval(() => {
-    if (document.readyState === "complete") {
-      clearInterval(checkReady);
-      console.log("We're in the injected content script!");
-    }
-  });
-});
-
 window.addEventListener("message", function () {
   let elements = document.querySelectorAll("._58nk");
 
